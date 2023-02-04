@@ -1,4 +1,4 @@
-full course:    
+full course: https://www.codingame.com/playgrounds/349/introduction-to-mpi/introduction-to-distributed-computing   
 
 **Introduction**
 
@@ -55,6 +55,6 @@ P2P messages has the following properties:
 
 Work in the same way as sending messages but instead of dest id we need a source id.
 
-After the basic information about blocking communications check: [blocking_comms.cpp](https://www.google.com)
+After the basic information about blocking communications check: [blocking_comms.cpp](https://github.com/Alexsandrux/DADExamLearning/blob/main/Curs8/blocking_comms.cpp)
 
 
