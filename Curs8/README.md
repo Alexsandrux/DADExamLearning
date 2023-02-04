@@ -1,19 +1,60 @@
-full course: https://www.codingame.com/playgrounds/349/introduction-to-mpi/introduction-to-distributed-computing
+full course:    
 
 **Introduction**
 
-Message Passing Interface (MPI) este o librarie standardizata pentru pasarea mesajelor.
+Message Passing Interface (MPI) is a standardized library for passing messages.
 
-MPI este doar un standard, ceea ce inseamna ca avem o lista abstracta de features si concepte care vor fi implementate.
+MPI is just a standard, which means that we have an abstract list of features and concepts that will be implemented.
 
-MPI se ocupa cu pasarea mesajelor intre procese ce poate fi un lucru foarte bun pentru paralelism si HPC.
+MPI is used for passing messages between processes which can be a really good for paralelism and HPC.
 
-Dar, zona unde MPI straluceste este Distributed Computing, unde de mult timp MPI este folosit pentru pasarea mesajelor intre diferitele noduri ale unei arhitecturi distribuite.
+
+But, the area where MPI truly shines is **Distributed Computing**, where  for a long time MPI is used for passing messages between the different nodes of a distributed arhitecture.
 
 **MPI_COMM_WORLD**
 
-Cand un program este rulat cu MPI toate procesele sunt grupate intr-un "communicator". Putem considera communicator-ul ca o cutie care grupeaza procesele impreuna, astfel fiecare comunicare este atribuita unui communicator, astfel reusing sa ajunga la fiecare proces.
+When a program is runned with MPI all the processes are grouped in a **COMMUNICATOR**. We can consider the communicator as a box where we can group the process toghether, thus all the communications are atribuited to a communicator. In this we they can get to every process.
 
-Communicator-ul default este MPI_COMM_WORLD care grupeaza toate procesele cand programul incepe.
 
-Numarul(dimensiunea) communicatorul nu se schimba dupa ce este creata. Iar fiecare proces are un numar numit "rank" cu ajutorul caruia este identificat.
+Types of communications:
+- Point-to-Point : Two processes in the same communicator are going to communicate.
+- Collective : All the processes in a communicator are going to communicate together.
+
+The default communicator is MPI_COMM_WORLD which groups all the processes when the program begins.
+
+The number(or **size**) of the communicator doesn't change after the it's creations. And every process has a number called **rank**, with the help of the program is identified.
+
+For the information until now check: [simple_hello_world.cpp](https://github.com/Alexsandrux/DADExamLearning/blob/main/Curs8/simple_hello_world.cpp)
+
+**Point-to-Point COMMUNICATION**
+
+P2P communications are divided in two operations:
+- **Send**
+- **Receive**
+
+P2P are called **BLOCKING COMMUNICATIONS** because the sending process will wait until the receiving process has finished receiving all the information.
+
+*Sending Messages*
+
+It sends a buffer of data of a certain type to another process.
+P2P messages has the following properties:
+
+1. The refference to a buffer
+2. A datatype
+    - char = MPI_CHAR
+    - int = MPI_INT
+    - float = MPI_FLOAT
+    - double = MPI_DOUBLE
+    - and many more types..
+3. The number of elements
+4. A tag (it defines the *type* of the communication, that is a completely informal value but by the user)
+5. Destination id (the rank of the receiving process)
+6. A communicator
+
+*Receiving Messages*
+
+Work in the same way as sending messages but instead of dest id we need a source id.
+
+After the basic information about blocking communications check: [blocking_comms.cpp](https://www.google.com)
+
+
