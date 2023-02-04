@@ -3,6 +3,7 @@ A pipe is a form of UNIX IPC.
 The pipe takes at least 2 file descriptors(fd) as parameters.
 
 ---------------------break-----------------------
+
 What is a file descriptor you might say?
 Well, a fd is file where the process writes.
 The default fd are stdin(0), stdout(1), stderr(2).
