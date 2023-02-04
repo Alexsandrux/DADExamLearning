@@ -51,11 +51,23 @@ P2P messages has the following properties:
 5. Destination id (the rank of the receiving process)
 6. A communicator
 
+Sending code looks like this:
+```
+int MPI_Send(void *buf, int count , MPI_Datatype datatype, int dest, int tag, MPI_Comm comm);
+```
+
 *Receiving Messages*
 
-Work in the same way as sending messages but instead of dest id we need a source id.
+Work in the same way as sending messages but instead of dest id we need a source id, but we also need a status.
 
 We can use ```MPI_ANY_SOURCE``` instead of the source name for accepting any process and we can later find the the sender in MPI_Status struct.
+
+Receiving code looks like this:
+```
+int MPI_Recv(void *buf, int count, MPI_Datatype datatype, int source, int tag, MPI_Comm comm, MPI_Status *status);
+```
+
+We can use ```MPI_STATUS_IGNORE``` to omit using the status.
 
 **MPI_Status**
 
@@ -103,3 +115,28 @@ For blocking communication there are four types of communication modes to trigge
 
 
 **COLLECTIVE COMMUNICATION**
+
+Collective communication is used to exchange more easily information across all in processes of a communicator. 
+Collective communication are useful for a lot of things. Depending of the objective there are different types of collective communications.
+
+Some types of collective communications are:
+- **Broadcast** - One process sends a message to every other process
+- **Reduction** - One process gets data from all the other processes
+- **Scatter** - a single process partitions the data and sends pieces to every other process
+- **Gather** - a single process assembles the data from different processes into a buffer
+
+    _BROADCAST_
+
+    Broadcast happens when one process wants to send information to all other processes. Broadcast is a non blocking operation, so processes continue running as soon as the information has been sent/received.
+
+    After the operation, all process will have a copy of the data from the root process in their buffers.
+
+    There are two types of Broadcast implementations:
+    - one that is P2P: the root sends the information to all other processes one by one
+    - one that relies on a tree structure: after the root sends the information to another process it reshares the information.
+
+    Broadcast looks like this:
+    ```
+    int MPI_Bcast(void* buffer, int count, MPI_Datatype datatype, int root, MPI_Comm comm);
+    ```
+
