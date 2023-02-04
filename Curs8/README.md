@@ -55,6 +55,28 @@ P2P messages has the following properties:
 
 Work in the same way as sending messages but instead of dest id we need a source id.
 
+We can use *MPI_ANY_SOURCE* instead of the source name for accepting any process and we can later find the the sender in MPI_Status struct.
+
+**MPI_Status**
+
+Is a struct that you can acces if necessary to check information about the received message.
+
+The MPI_Status struct looks like this:
+```
+struct MPI_Struct {
+  int MPI_SOURCE;
+  int MPI_TAG;
+  int MPI_ERROR;
+  int _cancelled;
+  size_t _ucount;
+};
+```
+
+It's declared like this:
+```
+MPI_Status variable_name;
+``` 
+
 After the basic information about blocking communications check: [blocking_comms.cpp](https://github.com/Alexsandrux/DADExamLearning/blob/main/Curs8/blocking_comms.cpp)
 
 
