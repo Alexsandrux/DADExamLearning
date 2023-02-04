@@ -17,10 +17,10 @@ When a program is runned with MPI all the processes are grouped in a **COMMUNICA
 
 
 Types of communications:
-- Point-to-Point : Two processes in the same communicator are going to communicate.
-- Collective : All the processes in a communicator are going to communicate together.
+- **Point-to-Point** : Two processes in the same communicator are going to communicate.
+- **Collective** : All the processes in a communicator are going to communicate together.
 
-The default communicator is MPI_COMM_WORLD which groups all the processes when the program begins.
+The default communicator is ```MPI_COMM_WORLD``` which groups all the processes when the program begins.
 
 The number(or **size**) of the communicator doesn't change after the it's creations. And every process has a number called **rank**, with the help of the program is identified.
 
@@ -41,10 +41,10 @@ P2P messages has the following properties:
 
 1. The refference to a buffer
 2. A datatype
-    - char = MPI_CHAR
-    - int = MPI_INT
-    - float = MPI_FLOAT
-    - double = MPI_DOUBLE
+    - char = ```MPI_CHAR```
+    - int = ```MPI_INT```
+    - float = ```MPI_FLOAT```
+    - double = ```MPI_DOUBLE```
     - and many more types..
 3. The number of elements
 4. A tag (it defines the *type* of the communication, that is a completely informal value but by the user)
@@ -55,7 +55,7 @@ P2P messages has the following properties:
 
 Work in the same way as sending messages but instead of dest id we need a source id.
 
-We can use *MPI_ANY_SOURCE* instead of the source name for accepting any process and we can later find the the sender in MPI_Status struct.
+We can use ```MPI_ANY_SOURCE``` instead of the source name for accepting any process and we can later find the the sender in MPI_Status struct.
 
 **MPI_Status**
 
@@ -79,4 +79,27 @@ MPI_Status variable_name;
 
 After the basic information about blocking communications check: [blocking_comms.cpp](https://github.com/Alexsandrux/DADExamLearning/blob/main/Curs8/blocking_comms.cpp)
 
+**NON-BLOCKING COMMUNICATION**
 
+In MPI NON-BLOCKING COMMUNICATION is always needed to be implemented and completed. We are supposed to do our work instead of waiting to send like in the BLOCKING COMMUNICATION and check from time to time if the process we are sending to is ready to receive.
+
+> kinda complicated and too much time to understand and implement... continuing after exam
+
+**RACING CONDITIONS**
+
+> kinda complicated and too much time to understand and implement... continuing after exam
+
+**PROBING INCOMING COMMUNICATIONS**
+
+> kinda complicated and too much time to understand and implement... continuing after exam
+
+**COMMUNICATION MODES**
+
+For blocking communication there are four types of communication modes to trigger the communication:
+- standard ```MPI_Send```
+- buffered ```MPI_Bsend``` => is similar to non-blocking communication because it stores all the data to be sent in a temporary buffer.
+- ready ```MPI_Rsend``` => this makes sure the recv was been already called
+- synchronous ```MPI_Ssend``` => for this the send will wait for the recv to complete ensuring that both processes are ready to transfer.
+
+
+**COLLECTIVE COMMUNICATION**
