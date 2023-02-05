@@ -140,6 +140,8 @@ Some types of collective communications are:
     int MPI_Bcast(void* buffer, int count, MPI_Datatype datatype, int root, MPI_Comm comm);
     ```
 
+    For broadcast example try: [bcast.cpp](https://github.com/Alexsandrux/DADExamLearning/blob/main/Curs8/bcast.cpp)
+
     _REDUCE_
 
     Reduce is a simple operation on all buffers on all processes.
@@ -162,6 +164,8 @@ Some types of collective communications are:
     int MPI_Reduce(void* send_data, void* recv_data, int count, MPI_Datatype type, MPI_Op op, int root, MPI_Comm communicator); 
     ```
 
+    For reduce example try: [reduce.cpp](https://github.com/Alexsandrux/DADExamLearning/blob/main/Curs8/reduce.cpp)
+
     _SCATTER AND GATHER_
 
     This two are very useful operations for collective operations used distribute and regroup data from one to many and the oposite.
@@ -179,4 +183,6 @@ Some types of collective communications are:
                void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
                MPI_Comm comm);
     ```
+
+    For Gather and Scatter try: [scatter_gather.cpp](https://github.com/Alexsandrux/DADExamLearning/blob/main/Curs8/scatter_gather.cpp)
 
