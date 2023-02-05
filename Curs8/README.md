@@ -121,7 +121,7 @@ Collective communication are useful for a lot of things. Depending of the object
 
 Some types of collective communications are:
 - **Broadcast** - One process sends a message to every other process
-- **Reduction** - One process gets data from all the other processes
+- **Reduction** - One process gets data from all the other processes and applies an operation on it (sum, minimum, maximum, etc.
 - **Scatter** - a single process partitions the data and sends pieces to every other process
 - **Gather** - a single process assembles the data from different processes into a buffer
 
@@ -138,5 +138,27 @@ Some types of collective communications are:
     Broadcast looks like this:
     ```
     int MPI_Bcast(void* buffer, int count, MPI_Datatype datatype, int root, MPI_Comm comm);
+    ```
+
+    _REDUCE_
+
+    Reduce is a simple operation on all buffers on all processes.
+
+    We can use predefined operations or we can create our own.
+
+    This some of the posible flags we can use for predefined operations:
+    - ```MPI_MAX```
+    - ```MPI_MIN```
+    - ```MPI_SUM```
+    - ```MPI_MINLOC``` (gives the minimum and location)
+    - ```MPI_PROD```
+    - etc.
+
+    What if we use operations on arrays?
+    Well, the operations are element-wise and we will get as many result as the size of the array. So will we get the operation for the first element of the array, the second, the third, and so on..
+
+    Reduce looks like this:
+    ```
+    int MPI_Reduce(void* send_data, void* recv_data, int count, MPI_Datatype type, MPI_Op op, int root, MPI_Comm communicator); 
     ```
 
