@@ -55,8 +55,12 @@ Skeleton & JRMI Stub classes using rmic utility program
 remote interface – from the server side to the client side
 7. Compiling the client Java source code file together with the files from
 step 6.
+
     **RUNNING RMI SERVER**:
+
 8. Start the JRMI registry program. 
 9. Start the server program.
+
     **RUNNING RMI CLIENT**:
+    
 10. Start the client program
