@@ -41,13 +41,13 @@ In summary, the RMI architecture allows for the creation of distributed systems 
 **DEVELOPING A RMI SYSTEM**
 
     **DEVELOPMENT of the RMI SERVER**:
-    
+
 1. Defining the remote interface. The remote interface must extend the `java.rmi.Remote` interface and declare all its methods to throw `java.rmi.RemoteException`.
 2. Developing the Java class for instantiation of the JRMI server object –
 implementing the interface from the step 1. The remote object must extend `java.rmi.server.UnicastRemoteObject` and implement the methods defined in the remote interface.
 3. Developing the Java main server program. Bind the remote object to the RMI registry: The next step is to bind the remote object to the registry so that it can be located by clients. This can be done by calling the `rebind` method of the `java.rmi.Naming class`.
 4. Compiling the Java server classes source code and generating the JRMI
-Skeleton & JRMI Stub classes using rmic utility program
+Skeleton & JRMI Stub classes using rmic utility program.
 
     **DEVELOPMENT of the RMI CLIENT**:
 
