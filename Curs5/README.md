@@ -20,11 +20,11 @@ Contains:
 - JSP Scriplet ```<% %>```
 - JSP Declaration ```<%! %>```
 - JSP Page Directive ```<%@ page att="value" %>``` 
-- JSP Include Directive ```<%@ include file="url"  %>``
+- JSP Include Directive ```<%@ include file="url"  %>```
 - JSP Comment ```<%-- --%>```
 - JSP Include Action ```<jsp:include />```
 - JSP useBean Action ```<jsp:useBean att="val"  id="id" class="class/>```
 - JSP setProperty Action ```<jsp:setProperty att="val"/>```
-- JSP getProperty Action ```<jsp:getProperty name="propertyName" value="val"/>``
+- JSP getProperty Action ```<jsp:getProperty name="propertyName" value="val"/>```
 - JSP Forward Action ```<jsp:forward page="relative URL"/>```
 - JSP Plugin aCTION ```<jsp:plugin attrivute="val"> ... </jsp:plugin>```
