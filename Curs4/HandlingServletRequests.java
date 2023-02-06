@@ -11,16 +11,16 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Servlet implementation class test1
+ * Servlet implementation class HandlingServletRequests
  */
-@WebServlet("/test1")
-public class test1 extends HttpServlet {
+@WebServlet("/HandlingServletRequests")
+public class HandlingServletRequests extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public test1() {
+    public HandlingServletRequests() {
         super();
         // TODO Auto-generated constructor stub
     }
