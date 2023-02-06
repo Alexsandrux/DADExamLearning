@@ -22,3 +22,4 @@ They run on the server side and are used to interact with the applications to pr
 4. Displaying or using the status codes and the response headers
 5. Handling Cookies
 6. Session Tracking
+7. Share data between java servlets
