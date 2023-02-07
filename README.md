@@ -8,7 +8,7 @@ Table of contents:
 4.  Curs4 - Servlet
 5.  Curs5 - JSP
 6.  Curs6 - RMI
-7.  Curs7 -
+7.  Curs7 - CORBA, SUN, WEB SERVICES & SOA
 8.  Curs8 - openMPI
 9.  Curs9 - REST API node.js 
 10. Curs 10 - JMS KAFKA
