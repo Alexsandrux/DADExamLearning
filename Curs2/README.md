@@ -18,3 +18,5 @@ Atat Trap, cat si Inform fac acelasi lucru, dar doar Inform este de incredere de
 
 **UDP vs. TCP**
 
+![tcp_Vs_udp](https://github.com/Alexsandrux/DADExamLearning/blob/main/Images/tcp%20vs%20udp.png)
+
