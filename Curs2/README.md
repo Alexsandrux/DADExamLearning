@@ -14,7 +14,11 @@ Atat Trap, cat si Inform fac acelasi lucru, dar doar Inform este de incredere de
 
 **UDP**
 
+![udp](https://github.com/Alexsandrux/DADExamLearning/blob/main/Images/udp.png)
+
 **TCP**
+
+![tcp](https://github.com/Alexsandrux/DADExamLearning/blob/main/Images/tcp.png)
 
 **UDP vs. TCP**
 
