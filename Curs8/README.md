@@ -186,6 +186,11 @@ Some types of collective communications are:
 
     For Gather and Scatter try: [scatter_gather.cpp](https://github.com/Alexsandrux/DADExamLearning/blob/main/Curs8/scatter_gather.cpp)
 
+**OpenMP**
+
+OpenMP is a software library and API (Application Programming Interface) for shared memory parallel programming in C, C++ and Fortran programming languages. It provides a standardized and portable way to write parallel programs on multi-core processors, symmetric multiprocessing (SMP) systems, and other shared memory architectures. OpenMP enables the programmer to write parallel code using familiar constructs such as loops and sections, without having to manage low-level details such as thread creation and synchronization.
+
+
 **OpenMP vs OpenMPI**
 
 ![mpvsmpi](https://github.com/Alexsandrux/DADExamLearning/blob/main/Images/mpvsmpi.png)
