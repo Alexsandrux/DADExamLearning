@@ -186,3 +186,6 @@ Some types of collective communications are:
 
     For Gather and Scatter try: [scatter_gather.cpp](https://github.com/Alexsandrux/DADExamLearning/blob/main/Curs8/scatter_gather.cpp)
 
+**OpenMP vs OpenMPI**
+
+![mpvsmpi](https://github.com/Alexsandrux/DADExamLearning/blob/main/Images/mpvsmpi.png)
